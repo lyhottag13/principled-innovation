@@ -1,15 +1,25 @@
 extends Control
 
+@onready var course: Control = %Course
+@onready var leaderboard: Control = %Leaderboard
+@onready var profile: Control = %Profile
+@onready var main_screen: Node = %MainScreen
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _on_course_button_pressed() -> void:
+	_hide_screens()
+	course.show()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_leaderboard_button_pressed() -> void:
+	_hide_screens()
+	leaderboard.show()
 
 
-func _on_button_pressed() -> void:
-	pass # Replace with function body.
+func _on_profile_button_pressed() -> void:
+	_hide_screens()
+	profile.show()
+
+
+func _hide_screens() -> void:
+	for screen: Control in main_screen.get_children():
+		screen.hide()

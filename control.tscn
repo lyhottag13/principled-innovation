@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b1fcbirk7aovb"]
 
 [ext_resource type="Script" uid="uid://b2621a58dj10o" path="res://control.gd" id="1_0fbet"]
+[ext_resource type="PackedScene" uid="uid://ciwmxf0bqssxj" path="res://leaderboard_panel.tscn" id="2_62e2m"]
+[ext_resource type="Texture2D" uid="uid://beefcvdm3e5p0" path="res://guy.png" id="2_qtu10"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
 bg_color = Color(0.8125, 0.8125, 0.8125, 1)
@@ -25,6 +27,29 @@ corner_radius_bottom_left = 100
 [sub_resource type="Theme" id="Theme_gj7qu"]
 Button/font_sizes/font_size = 31
 Button/styles/normal = SubResource("StyleBoxFlat_uchyk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
+bg_color = Color(1, 0, 0.5062504, 1)
+border_color = Color(1, 0.5803922, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
+bg_color = Color(1, 0, 0.5058824, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
+bg_color = Color(0, 0.53125, 1, 1)
+border_color = Color(1, 0.5803922, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Control" type="Control" unique_id=1483601936]
 layout_mode = 3
@@ -54,39 +79,44 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BottomPanel" unique_id=1924976012]
+[node name="BottomButtonContainer" type="HBoxContainer" parent="BottomPanel" unique_id=1924976012]
 layout_mode = 2
 
-[node name="CourseButton" type="Button" parent="BottomPanel/HBoxContainer" unique_id=165732865]
+[node name="CourseButton" type="Button" parent="BottomPanel/BottomButtonContainer" unique_id=165732865]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
 text = "Course"
 
-[node name="LeaderboardButton" type="Button" parent="BottomPanel/HBoxContainer" unique_id=1477638157]
+[node name="LeaderboardButton" type="Button" parent="BottomPanel/BottomButtonContainer" unique_id=1477638157]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
 text = "Leaderboard"
 
-[node name="ProfileButton" type="Button" parent="BottomPanel/HBoxContainer" unique_id=1271593934]
+[node name="ProfileButton" type="Button" parent="BottomPanel/BottomButtonContainer" unique_id=1271593934]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
 text = "Profile"
 
-[node name="Course" type="Control" parent="." unique_id=440000057]
-layout_mode = 1
+[node name="MainScreen" type="Node" parent="." unique_id=590941043]
+unique_name_in_owner = true
+
+[node name="Course" type="Control" parent="MainScreen" unique_id=440000057]
+unique_name_in_owner = true
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Course" unique_id=385560571]
+[node name="MarginContainer" type="MarginContainer" parent="MainScreen/Course" unique_id=385560571]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -97,7 +127,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Label" type="Label" parent="Course/MarginContainer" unique_id=1970911013]
+[node name="Label" type="Label" parent="MainScreen/Course/MarginContainer" unique_id=1970911013]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 38
@@ -106,7 +136,7 @@ text = "How-To Civic"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Course" unique_id=802601460]
+[node name="Button" type="Button" parent="MainScreen/Course" unique_id=802601460]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -123,7 +153,7 @@ scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "1"
 
-[node name="Button2" type="Button" parent="Course" unique_id=316681695]
+[node name="Button2" type="Button" parent="MainScreen/Course" unique_id=316681695]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -140,7 +170,7 @@ scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "2"
 
-[node name="Button3" type="Button" parent="Course" unique_id=946094079]
+[node name="Button3" type="Button" parent="MainScreen/Course" unique_id=946094079]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -157,7 +187,7 @@ scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "3"
 
-[node name="Button4" type="Button" parent="Course" unique_id=1064898066]
+[node name="Button4" type="Button" parent="MainScreen/Course" unique_id=1064898066]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -174,7 +204,7 @@ scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "4"
 
-[node name="Button5" type="Button" parent="Course" unique_id=1809891240]
+[node name="Button5" type="Button" parent="MainScreen/Course" unique_id=1809891240]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -191,7 +221,7 @@ scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "5"
 
-[node name="Button6" type="Button" parent="Course" unique_id=1114596137]
+[node name="Button6" type="Button" parent="MainScreen/Course" unique_id=1114596137]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -208,4 +238,182 @@ scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "6"
 
-[connection signal="pressed" from="Course/Button" to="." method="_on_button_pressed"]
+[node name="Profile" type="Control" parent="MainScreen" unique_id=454452690]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainScreen/Profile" unique_id=668722424]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MainScreen/Profile/MarginContainer" unique_id=783112116]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_ee4bf")
+text = "Profile"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Picture" type="TextureRect" parent="MainScreen/Profile" unique_id=1647265189]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.5
+offset_top = -242.0
+offset_right = 47.5
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qtu10")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainScreen/Profile" unique_id=1375140923]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -123.0
+offset_right = 67.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "SuperDuperCIVIC"
+
+[node name="PanelContainer" type="PanelContainer" parent="MainScreen/Profile" unique_id=1763060578]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -79.0
+offset_right = 157.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_57qmd")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainScreen/Profile/PanelContainer" unique_id=411478718]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainScreen/Profile/PanelContainer/MarginContainer" unique_id=2055641646]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainScreen/Profile/PanelContainer/MarginContainer/VBoxContainer" unique_id=35671151]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Streak:"
+
+[node name="Label2" type="Label" parent="MainScreen/Profile/PanelContainer/MarginContainer/VBoxContainer" unique_id=10148562]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "3 Days"
+
+[node name="Label3" type="Label" parent="MainScreen/Profile/PanelContainer/MarginContainer/VBoxContainer" unique_id=1271842438]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Keep Going!"
+
+[node name="Leaderboard" type="Control" parent="MainScreen" unique_id=1479183272]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainScreen/Leaderboard" unique_id=1977564171]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MainScreen/Leaderboard/MarginContainer" unique_id=1631440445]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtu10")
+text = "Eaglet League"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MainScreen/Leaderboard" unique_id=895958347]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.187
+anchor_right = 1.0
+anchor_bottom = 0.845
+offset_top = 0.3999939
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=1550303067 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  1    JB"
+
+[node name="MarginContainer2" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=2025797837 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  2    CivicallyEngagedDude123"
+
+[node name="MarginContainer3" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=1469297791 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  3    JB's Mom"
+
+[node name="MarginContainer4" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=245930274 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  4    TheGrahamGuy"
+
+[node name="MarginContainer5" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=741171674 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  5    AwesomePerson99"
+
+[node name="MarginContainer6" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=2123221871 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  6    ILovePOLITICS!"
+
+[node name="MarginContainer7" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=1723011425 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  7    NumbahSeven"
+
+[node name="MarginContainer8" parent="MainScreen/Leaderboard/HBoxContainer" unique_id=1563109832 instance=ExtResource("2_62e2m")]
+layout_mode = 2
+label_text = "  8    SuperDuperCIVIC (You)"
+
+[connection signal="pressed" from="BottomPanel/BottomButtonContainer/CourseButton" to="." method="_on_course_button_pressed"]
+[connection signal="pressed" from="BottomPanel/BottomButtonContainer/LeaderboardButton" to="." method="_on_leaderboard_button_pressed"]
+[connection signal="pressed" from="BottomPanel/BottomButtonContainer/ProfileButton" to="." method="_on_profile_button_pressed"]
+[connection signal="pressed" from="MainScreen/Course/Button" to="." method="_on_button_pressed"]
