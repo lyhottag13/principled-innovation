@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://b1fcbirk7aovb"]
+
+[ext_resource type="Script" uid="uid://b2621a58dj10o" path="res://control.gd" id="1_0fbet"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.8125, 0.8125, 0.8125, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
+bg_color = Color(1, 0.58124995, 0, 1)
+border_color = Color(1, 0.5803922, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uchyk"]
+bg_color = Color(1, 0.5803922, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Theme" id="Theme_gj7qu"]
+Button/font_sizes/font_size = 31
+Button/styles/normal = SubResource("StyleBoxFlat_uchyk")
+
+[node name="Control" type="Control" unique_id=1483601936]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="WhiteBackground" type="ColorRect" parent="." unique_id=587516483]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1859224488]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -118.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1924976012]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer" unique_id=165732865]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+text = "Course"
+
+[node name="Button2" type="Button" parent="PanelContainer/HBoxContainer" unique_id=1477638157]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+text = "Leaderboard"
+
+[node name="Button3" type="Button" parent="PanelContainer/HBoxContainer" unique_id=1271593934]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+text = "Profile"
+
+[node name="Control" type="Control" parent="." unique_id=440000057]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=385560571]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Control/MarginContainer" unique_id=1970911013]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "How-To Civic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control" unique_id=802601460]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -240.0
+offset_right = 95.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.655)
+theme = SubResource("Theme_gj7qu")
+text = "1"
+
+[node name="Button2" type="Button" parent="Control" unique_id=316681695]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -162.0
+offset_right = 69.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.655)
+theme = SubResource("Theme_gj7qu")
+text = "2"
+
+[node name="Button3" type="Button" parent="Control" unique_id=946094079]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -87.0
+offset_right = 9.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.655)
+theme = SubResource("Theme_gj7qu")
+text = "3"
+
+[node name="Button4" type="Button" parent="Control" unique_id=1064898066]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -0.9999695
+offset_right = -27.0
+offset_bottom = 89.00003
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.655)
+theme = SubResource("Theme_gj7qu")
+text = "4"
+
+[node name="Button5" type="Button" parent="Control" unique_id=1809891240]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = 83.0
+offset_right = 6.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.655)
+theme = SubResource("Theme_gj7qu")
+text = "5"
+
+[node name="Button6" type="Button" parent="Control" unique_id=1114596137]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 164.0
+offset_right = 74.0
+offset_bottom = 254.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.655)
+theme = SubResource("Theme_gj7qu")
+text = "6"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
