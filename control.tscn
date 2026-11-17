@@ -9,8 +9,8 @@ bg_color = Color(0.8125, 0.8125, 0.8125, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
-bg_color = Color(1, 0.58124995, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
+bg_color = Color(1, 0.5803922, 0, 1)
 border_color = Color(1, 0.5803922, 0, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
@@ -27,6 +27,14 @@ corner_radius_bottom_left = 100
 [sub_resource type="Theme" id="Theme_gj7qu"]
 Button/font_sizes/font_size = 31
 Button/styles/normal = SubResource("StyleBoxFlat_uchyk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
+bg_color = Color(0.59375, 0, 1, 1)
+border_color = Color(1, 0.5803922, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
 bg_color = Color(1, 0, 0.5062504, 1)
@@ -89,6 +97,13 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
 text = "Course"
 
+[node name="SquadButton" type="Button" parent="BottomPanel/BottomButtonContainer" unique_id=1618123372]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+text = "Squad"
+
 [node name="LeaderboardButton" type="Button" parent="BottomPanel/BottomButtonContainer" unique_id=1477638157]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -108,6 +123,7 @@ unique_name_in_owner = true
 
 [node name="Course" type="Control" parent="MainScreen" unique_id=440000057]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,7 +147,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 38
-theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kbped")
 text = "PIP 2 Eagle"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -144,12 +160,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -240.0
+offset_top = -251.99998
 offset_right = -60.0
-offset_bottom = -150.0
+offset_bottom = -161.99998
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 0.655)
+scale = Vector2(1, 0.85)
 theme = SubResource("Theme_gj7qu")
 text = "1"
 
@@ -170,12 +186,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -162.0
+offset_top = -167.0
 offset_right = -60.0
-offset_bottom = -72.0
+offset_bottom = -77.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 0.655)
+scale = Vector2(1, 0.85)
 theme = SubResource("Theme_gj7qu")
 text = "2"
 
@@ -201,7 +217,7 @@ offset_right = -60.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 0.655)
+scale = Vector2(1, 0.85)
 theme = SubResource("Theme_gj7qu")
 text = "3"
 
@@ -228,7 +244,7 @@ offset_right = -60.0
 offset_bottom = 89.00003
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 0.655)
+scale = Vector2(1, 0.85)
 theme = SubResource("Theme_gj7qu")
 text = "4"
 
@@ -254,7 +270,7 @@ offset_right = -60.0
 offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 0.655)
+scale = Vector2(1, 0.85)
 theme = SubResource("Theme_gj7qu")
 text = "5"
 
@@ -281,7 +297,7 @@ offset_right = -60.0
 offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 0.655)
+scale = Vector2(1, 0.85)
 theme = SubResource("Theme_gj7qu")
 text = "6"
 
@@ -293,6 +309,132 @@ offset_right = 297.0
 offset_bottom = 58.114506
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Real World Action"
+
+[node name="Squad" type="Control" parent="MainScreen" unique_id=214035354]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainScreen/Squad" unique_id=1900800036]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MainScreen/Squad/MarginContainer" unique_id=1386843671]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "PIP Squad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Person" type="Control" parent="MainScreen/Squad" unique_id=1696602731]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="MainScreen/Squad/Person" unique_id=382506875]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 152.0
+offset_right = 100.0
+offset_bottom = 224.0
+texture = ExtResource("2_qtu10")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainScreen/Squad/Person" unique_id=234206437]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 182.0
+offset_right = 159.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SuperDuperCIVIC (You)"
+
+[node name="Person2" type="Control" parent="MainScreen/Squad" unique_id=458735800]
+anchors_preset = 0
+offset_top = 88.0
+offset_right = 40.0
+offset_bottom = 128.0
+
+[node name="TextureRect" type="TextureRect" parent="MainScreen/Squad/Person2" unique_id=801745541]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 152.0
+offset_right = 100.0
+offset_bottom = 224.0
+texture = ExtResource("2_qtu10")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainScreen/Squad/Person2" unique_id=2145521909]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 182.0
+offset_right = 159.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ILoveCivics!"
+
+[node name="Person3" type="Control" parent="MainScreen/Squad" unique_id=1894648330]
+anchors_preset = 0
+offset_top = 183.0
+offset_right = 40.0
+offset_bottom = 223.0
+
+[node name="TextureRect" type="TextureRect" parent="MainScreen/Squad/Person3" unique_id=1893568298]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 152.0
+offset_right = 100.0
+offset_bottom = 224.0
+texture = ExtResource("2_qtu10")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainScreen/Squad/Person3" unique_id=217071903]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 182.0
+offset_right = 159.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PrincipledInnovationRocks"
+
+[node name="Person4" type="Control" parent="MainScreen/Squad" unique_id=1272794024]
+anchors_preset = 0
+offset_top = 279.0
+offset_right = 40.0
+offset_bottom = 319.0
+
+[node name="TextureRect" type="TextureRect" parent="MainScreen/Squad/Person4" unique_id=931511387]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 152.0
+offset_right = 100.0
+offset_bottom = 224.0
+texture = ExtResource("2_qtu10")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainScreen/Squad/Person4" unique_id=1597244156]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 182.0
+offset_right = 159.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "CivicIndividual"
 
 [node name="Profile" type="Control" parent="MainScreen" unique_id=454452690]
 unique_name_in_owner = true
@@ -470,6 +612,7 @@ layout_mode = 2
 label_text = "  8    SuperDuperCIVIC (You)"
 
 [connection signal="pressed" from="BottomPanel/BottomButtonContainer/CourseButton" to="." method="_on_course_button_pressed"]
+[connection signal="pressed" from="BottomPanel/BottomButtonContainer/SquadButton" to="." method="_on_squad_button_pressed"]
 [connection signal="pressed" from="BottomPanel/BottomButtonContainer/LeaderboardButton" to="." method="_on_leaderboard_button_pressed"]
 [connection signal="pressed" from="BottomPanel/BottomButtonContainer/ProfileButton" to="." method="_on_profile_button_pressed"]
 [connection signal="pressed" from="MainScreen/Course/Button" to="." method="_on_button_pressed"]

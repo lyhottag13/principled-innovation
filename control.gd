@@ -3,6 +3,7 @@ extends Control
 @onready var course: Control = %Course
 @onready var leaderboard: Control = %Leaderboard
 @onready var profile: Control = %Profile
+@onready var squad: Control = %Squad
 @onready var main_screen: Node = %MainScreen
 
 func _on_course_button_pressed() -> void:
@@ -23,3 +24,8 @@ func _on_profile_button_pressed() -> void:
 func _hide_screens() -> void:
 	for screen: Control in main_screen.get_children():
 		screen.hide()
+
+
+func _on_squad_button_pressed() -> void:
+	_hide_screens()
+	squad.show()
