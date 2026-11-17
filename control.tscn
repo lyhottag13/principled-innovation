@@ -143,15 +143,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 5.0
+offset_left = -150.0
 offset_top = -240.0
-offset_right = 95.0
+offset_right = -60.0
 offset_bottom = -150.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "1"
+
+[node name="Label" type="Label" parent="MainScreen/Course/Button" unique_id=587128746]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 35.114506
+offset_right = 297.0
+offset_bottom = 58.114506
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Civic Basics & Vocab Bank"
 
 [node name="Button2" type="Button" parent="MainScreen/Course" unique_id=316681695]
 layout_mode = 1
@@ -160,15 +169,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -21.0
+offset_left = -150.0
 offset_top = -162.0
-offset_right = 69.0
+offset_right = -60.0
 offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "2"
+
+[node name="Label2" type="Label" parent="MainScreen/Course/Button2" unique_id=2145800081]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 35.114506
+offset_right = 297.0
+offset_bottom = 58.114506
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Who does what?"
 
 [node name="Button3" type="Button" parent="MainScreen/Course" unique_id=946094079]
 layout_mode = 1
@@ -177,15 +195,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -81.0
+offset_left = -150.0
 offset_top = -87.0
-offset_right = 9.0
+offset_right = -60.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "3"
+
+[node name="Label3" type="Label" parent="MainScreen/Course/Button3" unique_id=1380430156]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 21.374046
+offset_right = 297.0
+offset_bottom = 70.37405
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Fact checking &
+decoding media reports"
 
 [node name="Button4" type="Button" parent="MainScreen/Course" unique_id=1064898066]
 layout_mode = 1
@@ -194,15 +222,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -117.0
+offset_left = -150.0
 offset_top = -0.9999695
-offset_right = -27.0
+offset_right = -60.0
 offset_bottom = 89.00003
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "4"
+
+[node name="Label4" type="Label" parent="MainScreen/Course/Button4" unique_id=1061872212]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 35.114506
+offset_right = 297.0
+offset_bottom = 58.114506
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Simulate a scenario"
 
 [node name="Button5" type="Button" parent="MainScreen/Course" unique_id=1809891240]
 layout_mode = 1
@@ -211,15 +248,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -84.0
+offset_left = -150.0
 offset_top = 83.0
-offset_right = 6.0
+offset_right = -60.0
 offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "5"
+
+[node name="Label5" type="Label" parent="MainScreen/Course/Button5" unique_id=1881814853]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 12.213741
+offset_right = 481.0
+offset_bottom = 61.21374
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Prep for action from ballots 
+& voting to townhalls"
 
 [node name="Button6" type="Button" parent="MainScreen/Course" unique_id=1114596137]
 layout_mode = 1
@@ -228,15 +275,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
+offset_left = -150.0
 offset_top = 164.0
-offset_right = 74.0
+offset_right = -60.0
 offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.655)
 theme = SubResource("Theme_gj7qu")
 text = "6"
+
+[node name="Label6" type="Label" parent="MainScreen/Course/Button6" unique_id=1945993148]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 35.114506
+offset_right = 297.0
+offset_bottom = 58.114506
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Real World Action"
 
 [node name="Profile" type="Control" parent="MainScreen" unique_id=454452690]
 unique_name_in_owner = true
