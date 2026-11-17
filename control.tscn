@@ -132,7 +132,7 @@ layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
-text = "How-To Civic"
+text = "PIP 2 Eagle"
 horizontal_alignment = 1
 vertical_alignment = 1
 
